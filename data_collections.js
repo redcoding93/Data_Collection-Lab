@@ -66,6 +66,8 @@ console.log(constructObject(twoDimensionalArray));
 console.log(twoDimensionalArray.pop());
 console.log(twoDimensionalArray.push({ id: "48", name: "Barry", occupation: "Runner", age: "25" }));
 console.log(twoDimensionalArray);
+console.log(twoDimensionalArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" }));
+console.log(twoDimensionalArray);
 
 
 
