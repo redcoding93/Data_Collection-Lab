@@ -49,15 +49,11 @@ for (char of str) {
   }
 }
 
-if(cell1 || cell2 || cell3 || cell4){
+if (cell1 || cell2 || cell3 || cell4) {
   twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
 
 console.log(twoDimensionalArray);
-
-console.log(twoDimensionalArray);
-let arrToObj = Object.assign({}, [cell1, cell2, cell3, cell4]);
-console.log(arrToObj);
 
 let constructObject = arr => {
    return arr.reduce((acc, val) => {
@@ -67,7 +63,9 @@ let constructObject = arr => {
    }, {});
 };
 console.log(constructObject(twoDimensionalArray));
-
+console.log(twoDimensionalArray.pop());
+console.log(twoDimensionalArray.push({ id: "48", name: "Barry", occupation: "Runner", age: "25" }));
+console.log(twoDimensionalArray);
 
 
 
