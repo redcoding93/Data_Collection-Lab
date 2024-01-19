@@ -59,7 +59,14 @@ console.log(twoDimensionalArray);
 let arrToObj = Object.assign({}, [cell1, cell2, cell3, cell4]);
 console.log(arrToObj);
 
-
+let constructObject = arr => {
+   return arr.reduce((acc, val) => {
+      const [key, value] = val;
+      acc[key] = value;
+      return acc;
+   }, {});
+};
+console.log(constructObject(twoDimensionalArray));
 
 
 
