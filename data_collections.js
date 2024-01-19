@@ -1,40 +1,34 @@
-// This is the base data from previos lab
-
-// CSV Data we are working with
 let str =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26";
 
-// Variables created to hold cell data and placeholders
 let placeholder = '';
 let cell1 = '';
 let cell2 = '';
 let cell3 = '';
 let cell4 = '';
 let char = '';
+let twoDimensionalArray = [];
 
-// Loop for each character
 for (char of str) {
-    //Switch case to determin what to do with each char
   switch (char) {
     case ',':
       if (!cell1) {
-        cell1 = placeholder.split();
+        cell1 = placeholder;
         placeholder = '';
         break;
       } else if (!cell2) {
-        cell2 = placeholder.split();
+        cell2 = placeholder;
         placeholder = '';
         break;
       } else {
-        cell3 = placeholder.split();
+        cell3 = placeholder;
         placeholder = '';
         break;
       }
     case '\n':
-      cell4 = placeholder.split();
+      cell4 = placeholder;
       placeholder = '';
-      console.log(cell1, cell2, cell3, cell4);
-    //   console.log(cell1.split(), cell2.split(), cell3.split(), cell4.split());
+      twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
       cell1 = '';
       cell2 = '';
       cell3 = '';
@@ -42,13 +36,10 @@ for (char of str) {
       break;
     default:
       placeholder += char;
-      //char += twoDem;
-    //   char.slice(4,4);
-    //   char += col;
-    //   console.log(col);
   }
 }
 
+// Handle the last row if it doesn't end with '\n'
 if (cell1 || cell2 || cell3 || cell4) {
   twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
@@ -68,10 +59,6 @@ console.log(twoDimensionalArray.push({ id: "48", name: "Barry", occupation: "Run
 console.log(twoDimensionalArray);
 console.log(twoDimensionalArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" }));
 console.log(twoDimensionalArray);
-
-
-
-
 
 
 
