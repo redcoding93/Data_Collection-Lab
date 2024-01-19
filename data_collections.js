@@ -49,17 +49,10 @@ for (char of str) {
   }
 }
 
-let arr = [];
-let rows = 4;
-let columns = 4;
-// creating two-dimensional array
-for (let i = 0; i < rows; i++) {
-  arr[i] = [];
-  for (let j = 0; j < columns; j++) {
-    arr[i][j] = j;
-  }
+if(cell1 || cell2 || cell3 || cell4){
+  twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
 
-console.log(arr);
+console.log(twoDimensionalArray);
 
 
