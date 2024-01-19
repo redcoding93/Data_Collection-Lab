@@ -41,7 +41,8 @@ for (char of str) {
 }
 
 //part 2
-// Two dimensional arrayif (cell1 || cell2 || cell3 || cell4) {
+// Two dimensional array
+if (cell1 || cell2 || cell3 || cell4) {
   twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
 
