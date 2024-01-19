@@ -55,4 +55,17 @@ if(cell1 || cell2 || cell3 || cell4){
 
 console.log(twoDimensionalArray);
 
+console.log(twoDimensionalArray);
+let arrToObj = Object.assign({}, [cell1, cell2, cell3, cell4]);
+console.log(arrToObj);
+
+
+
+
+
+
+
+
+
+
 
