@@ -85,3 +85,9 @@ for(let i = 0; i < twoDimensionalArray.length; i++){
   }	
 	let average = total / twoDimensionalArray.length;
 	console.log(average);
+
+// Part 5: Full Circle
+// The map() method on the twoDimensionalArray
+ let reversedString = twoDimensionalArray.map(row => row.join(',').concat('\n'));
+ reversedString.toString();
+ console.log(reversedString);
