@@ -46,22 +46,14 @@ if (cell1 || cell2 || cell3 || cell4) {
   twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
 
-console.log(twoDimensionalArray);
-
 //part 3
-let constructObject = arr => {
-   return arr.reduce((acc, val) => {
-      const [key, value] = val;
-      acc[key] = value;
-      return acc;
-   }, {});
-};
+let [keys, ...rows] = twoDimensionalArray;
+let result = rows.map(r => (keys.reduce((o, k, i) => (o[k] = r[i], o), {})));
+console.log(result)
 
 //part 4
-console.log(constructObject(twoDimensionalArray));
 console.log(twoDimensionalArray.pop());
 console.log(twoDimensionalArray.push({ id: "48", name: "Barry", occupation: "Runner", age: "25" }));
-console.log(twoDimensionalArray);
 console.log(twoDimensionalArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" }));
 console.log(twoDimensionalArray);
 
