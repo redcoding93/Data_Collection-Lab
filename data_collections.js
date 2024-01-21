@@ -1,4 +1,4 @@
-//part 1
+//Part 1: Refactoring Old Code
 let str =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26";
 
@@ -36,17 +36,17 @@ for (char of str) {
       cell4 = '';
       break;
     default:
-      placeholder += char;
+      placeholder += char.toLowerCase();
   }
 }
-
-//part 2
-// Two dimensional array
+//Part 2: Expanding Functionality
+//Two dimensional array
 if (cell1 || cell2 || cell3 || cell4) {
   twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
+console.log(twoDimensionalArray);
 
-//Part 3
+//Part 3: Transforming Data
 //Array.map(): The map() method in JavaScript creates a new array by applying a provided function to each element of the original array. 
 //It allows us to transform the elements of an array based on specific logic.
 
@@ -63,15 +63,15 @@ let result = rows.map(r => (keys.reduce((o, k, i) => (o[k] = r[i], o), {})));
 //Logs result
 console.log(result);
 
-//Part 4
+//Part 4: Sorting and Manipulating Data
 
 //Remove the last element from the sorted array.
-console.log(result.pop());
-console.log(result);
+result.pop();
+// console.log(result);
 
 //Insert the following object at index 1:
 result.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
-console.log(result);
+// console.log(result);
 
 //Add the following object to the end of the array:
 result.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
@@ -80,10 +80,8 @@ console.log(result);
 //Average age
 let total = 0;
 for(let i = 0; i < twoDimensionalArray.length; i++){
-	total += twoDimensionalArray;
+	total += twoDimensionalArray[i].age;
   	
   }	
 	let average = total / twoDimensionalArray.length;
 	console.log(average);
-
-
