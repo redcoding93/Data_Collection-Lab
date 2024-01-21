@@ -47,9 +47,21 @@ if (cell1 || cell2 || cell3 || cell4) {
 }
 
 //part 3
+//Array.map(): The map() method in JavaScript creates a new array by applying a provided function to each element of the original array. 
+//It allows us to transform the elements of an array based on specific logic.
+
+//Array.reduce(): The reduce() method in JavaScript applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. 
+//It is commonly used to perform calculations or transformations on arrays.
+
 let [keys, ...rows] = twoDimensionalArray;
+//Initializes the array variable with an array of arrays. The let keyword is used to declare the variable, and the array is assigned using square brackets.
+
+//The reduce() method is used to transform the row into an object with key-value pairs.
 let result = rows.map(r => (keys.reduce((o, k, i) => (o[k] = r[i], o), {})));
-console.log(result)
+//Uses the map() method to iterate over each row in the rows array.
+
+//Logs result
+console.log(result);
 
 //part 4
 console.log(twoDimensionalArray.pop());
