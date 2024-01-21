@@ -89,6 +89,8 @@ for(let i = 0; i < twoDimensionalArray.length; i++){
 // Part 5: Full Circle
 // The map() method on the twoDimensionalArray
 let reversedString = twoDimensionalArray.map(row => row.join(',').concat('\n'));
+//join was used to convert the object arrays into strings and concat was used to inlcude the \n character at the end of each row like the original string.
 console.log(reversedString);
+// toString() was used to turn the array holding the string into a stand alone string.
 let convert = reversedString.toString();
 console.log(convert);
