@@ -88,6 +88,7 @@ for(let i = 0; i < twoDimensionalArray.length; i++){
 
 // Part 5: Full Circle
 // The map() method on the twoDimensionalArray
- let reversedString = twoDimensionalArray.map(row => row.join(',').concat('\n'));
- reversedString.toString();
- console.log(reversedString);
+let reversedString = twoDimensionalArray.map(row => row.join(',').concat('\n'));
+console.log(reversedString);
+let convert = reversedString.toString();
+console.log(convert);
