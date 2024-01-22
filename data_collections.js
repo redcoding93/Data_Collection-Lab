@@ -11,7 +11,7 @@ let twoDimensionalArray = [];
 
 // Loop for each character
 for (char of str) {
-    //Switch case to determin what to do with each char
+    //Switch case to determine what to do with each char
   switch (char) {
     case ',':
       if (!cell1) {
@@ -43,6 +43,7 @@ for (char of str) {
 
 //Part 2: expanding functionality
 //Two dimensional array
+//Pushes each cell into an array; uses switch statement to make a two dimensional array
 if (cell1 || cell2 || cell3 || cell4){
 	twoDimensionalArray.push([cell1, cell2, cell3, cell4]);
 }
